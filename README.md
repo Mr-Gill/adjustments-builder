@@ -40,21 +40,26 @@ saving and asks you to use **Save file** instead.
 
 ## Licence
 
-Creative Commons Attribution 4.0 International (CC BY 4.0). Use it, adapt it,
-share it — including commercially — as long as you credit the source and say what
-you changed. Third-party curriculum names are excluded from that grant — see
-[LICENSE](LICENSE).
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)). Any
+school, teacher or education service may use this, adapt it and pass it on, free
+of charge, as long as they credit the source and share their changes on the same
+terms. Nobody may sell it or build a paid product on it. The bundled curriculum
+content is © VCAA under its own CC-BY-NC licence — see [LICENSE](LICENSE).
 
-## Curriculum references
+## Curriculum
 
-An adjustment can be linked to a curriculum code. The app ships with learning-area
-and level **names** only — no content descriptions, elaborations or achievement
-standards. If you paste curriculum text into a plan, it stays on your device.
+The **Victorian Curriculum F–10 Version 2.0** content descriptions are built in —
+all 2,968 of them. Search by word or code and the code, level and learning area
+fill themselves in. Achievement standards and elaborations are not included.
 
-Where those names are Victorian Curriculum F–10 naming conventions: the Victorian
-Curriculum F–10 content elements are © VCAA, licensed CC-BY-NC, and can be
-accessed at [f10.vcaa.vic.edu.au](https://f10.vcaa.vic.edu.au). Schools outside
-Victoria can rename the curriculum and point it at their own.
+The Victorian Curriculum F–10 content elements are © VCAA, licensed CC-BY-NC, and
+can be accessed at [f10.vcaa.vic.edu.au](https://f10.vcaa.vic.edu.au). Exported
+13 September 2026 and reformatted into the app's own structure; the wording is
+unchanged apart from mathematical notation written in plain text.
+
+Schools outside Victoria can rename the curriculum in Preferences and enter codes
+by hand. Support for other curriculum sets is planned.
 
 ## Contact
 

@@ -1,56 +1,62 @@
-Attribution 4.0 International (CC BY 4.0)
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 Copyright (c) 2026 David Gill
 
-This work — the Adjustments Builder application and the adjustment library it
-contains — is licensed under the Creative Commons Attribution 4.0 International
-Licence.
+The Adjustments Builder application and the adjustment library it contains are
+licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International Licence.
 
 You are free to:
   Share  — copy and redistribute the material in any medium or format
-  Adapt  — remix, transform, and build upon the material for any purpose,
-           including commercially
+  Adapt  — remix, transform, and build upon the material
 
 Under the following terms:
-  Attribution — You must give appropriate credit, provide a link to the licence,
-  and indicate if changes were made. You may do so in any reasonable manner, but
-  not in any way that suggests the licensor endorses you or your use.
+  Attribution   — You must give appropriate credit, provide a link to the
+                  licence, and indicate if changes were made.
+  NonCommercial — You may not use the material for commercial purposes.
+  ShareAlike    — If you remix, transform, or build upon the material, you must
+                  distribute your contributions under the same licence.
 
 No additional restrictions — You may not apply legal terms or technological
 measures that legally restrict others from doing anything the licence permits.
 
 The full licence text is at:
-  https://creativecommons.org/licenses/by/4.0/legalcode
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+In plain terms: any school, teacher or education service may use this, adapt it
+and pass it on, free of charge. Nobody may sell it or build a paid product on
+top of it.
+
+CURRICULUM CONTENT
+
+This application includes Victorian Curriculum F-10 Version 2.0 content
+descriptions, reproduced under the licence VCAA grants for them:
+
+  The Victorian Curriculum F-10 content elements are (c) VCAA, licensed
+  CC-BY-NC. The Victorian Curriculum F-10 and related content can be accessed
+  directly at the VCAA website (https://f10.vcaa.vic.edu.au).
+  Copyright statement: https://f10.vcaa.vic.edu.au/copyright-statement
+
+That content was exported from the VCAA curriculum download tool on
+13 September 2026 and reformatted into the application's own data structure.
+The content description text itself is unchanged. Achievement standards,
+elaborations and cross-curriculum priorities were not included.
+
+VCAA licenses this content for non-commercial use only. It remains (c) VCAA
+under its own licence and is not covered by the grant above. Both licences
+prohibit commercial use, so the same restriction applies either way: this
+application may not be sold or used commercially.
+
+A school outside Victoria can replace the curriculum data with its own.
 
 CONTACT
 
   David Gill - david.gill@education.vic.gov.au
 
-THIRD-PARTY MATERIAL
-
-The grant above covers the Adjustments Builder application and the adjustment
-library. It does not extend to third-party material referenced by the app.
-
-The curriculum feature stores learning-area names, level names and code prefixes
-so that a school can link an adjustment to its own curriculum. Where those names
-are Victorian Curriculum F-10 naming conventions, they are used as reference
-labels only:
-
-  The Victorian Curriculum F-10 content elements are (c) VCAA, licensed
-  CC-BY-NC. The Victorian Curriculum F-10 and related content can be accessed
-  directly at the VCAA website (https://f10.vcaa.vic.edu.au).
-
-No Victorian Curriculum content descriptions, elaborations or achievement
-standards are included in or distributed with this application. Where a user
-pastes curriculum text into their own plan, that text stays on their device and
-remains subject to the licence of whoever published it. Complying with that
-licence is the user's responsibility, not the author's.
-
 NOTICE
 
-The adjustment library distributed with this application is a working draft. It
-was assembled in one school and expanded with AI assistance. It is not
-departmental policy, not approved guidance, and not a substitute for
-professional judgement or your school's own processes. Every adjustment it
-produces is a starting point that a person must check before it is agreed or
-acted upon.
+The adjustment library is a working draft. It was assembled in one school and
+expanded with AI assistance. It is not departmental policy, not approved
+guidance, and not a substitute for professional judgement or your school's own
+processes. Every adjustment it produces is a starting point that a person must
+check before it is agreed or acted upon.
