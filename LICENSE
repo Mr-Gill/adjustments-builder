@@ -22,6 +22,30 @@ measures that legally restrict others from doing anything the licence permits.
 The full licence text is at:
   https://creativecommons.org/licenses/by/4.0/legalcode
 
+CONTACT
+
+  David Gill - david.gill@education.vic.gov.au
+
+THIRD-PARTY MATERIAL
+
+The grant above covers the Adjustments Builder application and the adjustment
+library. It does not extend to third-party material referenced by the app.
+
+The curriculum feature stores learning-area names, level names and code prefixes
+so that a school can link an adjustment to its own curriculum. Where those names
+are Victorian Curriculum F-10 naming conventions, they are used as reference
+labels only:
+
+  The Victorian Curriculum F-10 content elements are (c) VCAA, licensed
+  CC-BY-NC. The Victorian Curriculum F-10 and related content can be accessed
+  directly at the VCAA website (https://f10.vcaa.vic.edu.au).
+
+No Victorian Curriculum content descriptions, elaborations or achievement
+standards are included in or distributed with this application. Where a user
+pastes curriculum text into their own plan, that text stays on their device and
+remains subject to the licence of whoever published it. Complying with that
+licence is the user's responsibility, not the author's.
+
 NOTICE
 
 The adjustment library distributed with this application is a working draft. It

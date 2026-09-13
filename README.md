@@ -5,7 +5,7 @@ functional domain and activity, set the expected level of adjustment, tick the
 adjustments that apply, then export a Word document, a spreadsheet, or a printed
 copy.
 
-**Use it:** https://USERNAME.github.io/adjustments-builder/
+**Use it:** https://mr-gill.github.io/adjustments-builder/
 **Download it:** [`app.html`](app.html) — save the file and open it in any browser.
 
 ## What it is
@@ -42,11 +42,23 @@ saving and asks you to use **Save file** instead.
 
 Creative Commons Attribution 4.0 International (CC BY 4.0). Use it, adapt it,
 share it — including commercially — as long as you credit the source and say what
-you changed. See [LICENSE](LICENSE).
+you changed. Third-party curriculum names are excluded from that grant — see
+[LICENSE](LICENSE).
+
+## Curriculum references
+
+An adjustment can be linked to a curriculum code. The app ships with learning-area
+and level **names** only — no content descriptions, elaborations or achievement
+standards. If you paste curriculum text into a plan, it stays on your device.
+
+Where those names are Victorian Curriculum F–10 naming conventions: the Victorian
+Curriculum F–10 content elements are © VCAA, licensed CC-BY-NC, and can be
+accessed at [f10.vcaa.vic.edu.au](https://f10.vcaa.vic.edu.au). Schools outside
+Victoria can rename the curriculum and point it at their own.
 
 ## Contact
 
-[Add a contact address here before publishing.]
+David Gill — <david.gill@education.vic.gov.au>
 
 ## For maintainers
 
