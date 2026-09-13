@@ -158,7 +158,7 @@ table.plain th{color:var(--muted);font-size:12px;font-weight:600}
     <select class="mobonly" id="mobnav" aria-label="Go to"></select>
     <span class="spacer"></span>
     <span class="tiny" id="savedhint">Saved on this device</span>
-    <span class="tiny" id="appversion" title="Build identifier — quote this when reporting a problem">v2026.09.13 (8e0f6d8)</span>
+    <span class="tiny" id="appversion" title="Build identifier — quote this when reporting a problem">v2026.09.13 (305399c)</span>
     <button class="plain small" id="btn-about">About</button>
     <button class="plain small" id="btn-onboard">Setup guide</button>
   </header>
@@ -618,9 +618,11 @@ function segHtml(segs) {
 function wordingFor(kind, obj, sample, pick) { return compose(obj, kind, sample, pick); }
 function isFullTextOverride(pick) { return !!(pick && pick.custom && String(pick.text || '').trim()); }
 function recommendationLabel(pick) {
+  /* The only label left describes what the entry is, not how it was drafted:
+     in evidence/log mode an entry can be a record of what was actually provided.
+     Adjustments are chosen deliberately by a teacher, so they are not tagged. */
   if (S.audience === 'log' && canRecordImplementation(pick)) return '[Implementation record] ';
-  if (isFullTextOverride(pick)) return '[Teacher wording — review needed; status: ' + implementationStatus(pick) + '] ';
-  return '[AI-drafted — review needed; status: ' + implementationStatus(pick) + '] ';
+  return '';
 }
 function recommendationText(kind, obj, pick, sample) {
   const label = recommendationLabel(pick);
@@ -628,8 +630,9 @@ function recommendationText(kind, obj, pick, sample) {
 }
 function recommendationHtml(kind, obj, pick, sample) {
   const label = recommendationLabel(pick);
-  if (isFullTextOverride(pick)) return '<span class="tiny">' + esc(label) + '</span>' + esc(pick.text).replace(/\n/g, '<br>');
-  return '<span class="tiny">' + esc(label) + '</span>' + segHtml(compose(obj, kind, sample, pick));
+  const tag = label ? '<span class="tiny">' + esc(label) + '</span>' : '';
+  if (isFullTextOverride(pick)) return tag + esc(pick.text).replace(/\n/g, '<br>');
+  return tag + segHtml(compose(obj, kind, sample, pick));
 }
 
 /* the five columns used when a school chooses the table layout */
@@ -719,7 +722,6 @@ function detailRows(kind, obj, pick, sample) {
   /* A pick is always a working draft until an implementation record contains
      an explicit status, date and observed response.  These rows must remain
      visible even when a school hides optional questionnaire fields. */
-  out.push(['Draft source', esc(isFullTextOverride(p) ? 'Teacher wording — review needed' : 'AI-drafted working draft — review needed')]);
   out.push(['Implementation status', esc(implementationStatus(p))]);
   if (p.reviewNeeded) out.push(['Level-change review', esc('Review needed: predicted level changed'
     + (Number.isInteger(p.previousLevel) && p.previousLevel >= 0 && p.previousLevel <= 4 ? ' from ' + levelLabel(p.previousLevel) : '')
