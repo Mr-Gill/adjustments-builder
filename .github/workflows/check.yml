@@ -32,5 +32,5 @@ jobs:
       - name: Install Chromium for the tests
         run: npx playwright install --with-deps chromium
 
-      - name: Wording and app tests
+      - name: Browser tests and release checks
         run: npm test

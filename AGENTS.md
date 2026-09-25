@@ -26,14 +26,15 @@ with disability, so **privacy and safety come before features**.
 | `library/adjustments.csv`, `role-supports.csv`, `roles.csv` | **Built** spreadsheet copies of the library | Never by hand |
 | `library/corrections.csv` | Log of the September 2026 wording review | No |
 | `index.html` | Landing page | Yes |
-| `tests/` | Node test runner and Playwright tests | Yes |
+| `tests/` | Browser tests (`*.test.mjs`, Node + Playwright) and release checks (`test_*.py`, Python unittest) | Yes |
+| `REVIEW.md` | Record of the review of the AI-drafted label change | No |
 
 ## Making a change
 
 ```sh
 python3 tools/build.py      # rebuild app.html and the spreadsheets
 npm ci                      # first time only
-npm test                    # wording and app tests (about a minute)
+npm test                    # browser tests (Node) and release checks (Python)
 ```
 
 Commit the source change **and** the rebuilt `app.html` and CSVs together. CI
