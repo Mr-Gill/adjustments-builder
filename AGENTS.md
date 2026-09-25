@@ -19,7 +19,7 @@ with disability, so **privacy and safety come before features**.
 | `src/styles.css` | The app's stylesheet | Yes |
 | `src/shell.html` | Page skeleton with `{{styles}}`, `{{version}}`, `{{data}}`, `{{script}}` | Yes |
 | `src/VERSION` | Release date, e.g. `2026.09.25` | Bump when releasing |
-| `data/library.json` | The adjustment library: 686 adjustments, 93 role supports, roles, levels | Yes, for wording changes |
+| `data/library.json` | The adjustment library: 705 adjustments, 99 role supports, roles, levels | Yes, for wording changes |
 | `data/curricula.json` | Victorian Curriculum packs, gzipped and base64 encoded (© VCAA, CC BY-NC) | Rarely |
 | `tools/build.py` | Builds `app.html` and `library/*.csv` from the above | Yes |
 | `app.html` | **Built.** The file GitHub Pages serves and people download | Never by hand |

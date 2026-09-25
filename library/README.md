@@ -6,9 +6,9 @@ through a 1 MB HTML file. They open in Excel, Numbers or Google Sheets.
 
 | File | What is in it |
 |---|---|
-| `adjustments.csv` | All 686 activity-level adjustments: domain, activity, level, who leads, the wording, access outcome, frequency, evidence, student voice prompt and how support fades. |
-| `role-supports.csv` | The 93 role and coordination supports (what leaders, wellbeing, allied health and others commit to). |
-| `roles.csv` | The 19 staff roles, what each one does, and the other names schools use for them. |
+| `adjustments.csv` | All 705 activity-level adjustments: domain, activity, level, who leads, the wording, access outcome, frequency, evidence, student voice prompt and how support fades. |
+| `role-supports.csv` | The 99 role and coordination supports (what leaders, wellbeing, allied health and others commit to). |
+| `roles.csv` | The 20 staff roles, what each one does, and the other names schools use for them. |
 | `corrections.csv` | Every wording correction made in the September 2026 review: what it said, what it says now, and why. |
 
 ## Reading the wording

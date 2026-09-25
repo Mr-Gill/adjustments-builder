@@ -12,8 +12,8 @@ copy.
 
 - Runs entirely in your browser. There is no server, no account and no network
   call. Student details never leave the device they are typed on.
-- 686 activity-level adjustments across 6 functional domains and 31 activities,
-  plus 93 role and coordination supports.
+- 705 activity-level adjustments across 6 functional domains and 31 activities,
+  plus 99 role and coordination supports.
 - Everything is renameable: what you call a student, an adjustment, a level, a
   tier, and every staff role. A setup guide walks a school through it once.
 - Exports a real `.docx` and `.xlsx`, or prints to PDF.
