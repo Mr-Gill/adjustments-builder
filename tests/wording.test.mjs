@@ -70,6 +70,39 @@ test('pronouns only follow the student\'s name', async () => {
   assert.deepEqual(bad, [], 'name the student before using a pronoun token');
 });
 
+// Adjustments are chosen deliberately by a teacher, so neither the sentences
+// nor the exported document may tag them as drafts (removed in dfe25ef). The
+// only label is "[Implementation record]", and only for a recorded
+// implementation in the "record of what was provided" audience.
+test('adjustments carry no drafting tag; only recorded implementations are labelled', async () => {
+  const r = await page.evaluate(() => {
+    ST.details.name = 'Alex';
+    const it = ITEMS.find(i => i.id === 'D1-A03-SUP-01A');
+    const proposed = { level: 2, status: 'Proposed' };
+    const recorded = { level: 2, status: 'In place', startdate: '2026-09-01', observation: 'Reads the passage with the audio version' };
+    const custom = { level: 2, status: 'Proposed', custom: true, text: 'Our own wording for Alex.' };
+    const texts = [];
+    for (const aud of ['staff', 'support', 'family', 'student', 'log'])
+      for (const p of [proposed, recorded, custom]) { S.audience = aud; texts.push(recommendationText('item', it, p, false)); }
+    S.audience = 'log';
+    const logProposed = recommendationText('item', it, proposed, false);
+    const logRecorded = recommendationText('item', it, recorded, false);
+    S.audience = 'staff';
+    const a = ensureAct(it.a); a.level = 2; a.state = 'set'; a.picks = { [it.id]: recorded };
+    ST.acts[it.a] = a;
+    const doc = docHtml();
+    ST.acts = {};
+    return { texts, logProposed, logRecorded, doc };
+  });
+  const tagged = r.texts.filter(t => /AI-drafted|review needed|Draft source|working draft/i.test(t));
+  assert.deepEqual(tagged, [], 'no sentence may carry a drafting tag');
+  assert.doesNotMatch(r.doc, /AI-drafted|review needed|Draft source/i, 'the exported document may not tag adjustments as drafts');
+  assert.match(r.doc, /working draft, not approved guidance/, 'the library-level working-draft notice stays in the document');
+  assert.ok(r.logRecorded.startsWith('[Implementation record] '), 'a recorded implementation is labelled in the log audience');
+  assert.ok(!r.logProposed.startsWith('['), 'an adjustment that is only proposed is not labelled');
+  assert.equal(r.texts.filter(t => t.startsWith('[Implementation record]')).length, 1, 'the label appears only for the recorded pick in the log audience');
+});
+
 test('every library record is complete', async () => {
   const bad = await page.evaluate(() => ITEMS.filter(it =>
     !it.id || !it.at || !it.ao || !it.f || !Number.isInteger(it.l) || !ACTS[it.a] || !DOMAINS[it.d]

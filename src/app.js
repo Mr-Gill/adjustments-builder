@@ -649,9 +649,10 @@ function detailRows(kind, obj, pick, sample) {
   add('assigned', 'Named staff member', p.assigned);
   add('evbase', 'Evidence this is based on', p.evbase);
   add('specialist', 'Specialist or expert advice', p.specialist);
-  /* A pick is always a working draft until an implementation record contains
-     an explicit status, date and observed response.  These rows must remain
-     visible even when a school hides optional questionnaire fields. */
+  /* Every pick shows its implementation status (Proposed until the team records
+     otherwise), and an observed response only once a start date and observation
+     are recorded. These rows stay visible even when a school hides optional
+     questionnaire fields. Picks are not tagged by how their wording was drafted. */
   out.push(['Implementation status', esc(implementationStatus(p))]);
   if (p.reviewNeeded) out.push(['Level-change review', esc('Review needed: predicted level changed'
     + (Number.isInteger(p.previousLevel) && p.previousLevel >= 0 && p.previousLevel <= 4 ? ' from ' + levelLabel(p.previousLevel) : '')
