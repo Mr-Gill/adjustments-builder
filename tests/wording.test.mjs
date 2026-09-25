@@ -26,6 +26,7 @@ const FAULTS = [
   [/should use (significantly|consistently|closely|actively|regularly|directly|supervise|translate|in the|eat|wash|move|access|change|intake|end|repair|anticipate|intervene|physical|reposition|set up)\b/i, 'broken verb'],
   [/with (Regular|Frequent|Sustained|Brief|Ordinary)\b/, 'level summary leaked into a sentence'],
   [/(, with [^,]+,).*\1/, 'repeated intensity phrase'],
+  [/\bprogrammes?\b/, 'use "program" (Australian spelling)'],
 ];
 // Doubled words that are correct English.
 const ALLOWED_DOUBLES = /\b(that that|had had)\b/i;
@@ -55,6 +56,18 @@ test('the calm and recovery spaces are always voluntary', async () => {
     .filter(it => /\b(calm|recovery|safe) (or [\w-]+ )?space/i.test(it.at) && !/free to leave|can always leave/i.test(it.at))
     .map(it => it.id + ': ' + it.at));
   assert.deepEqual(bad, [], 'a calm or recovery space must say the student chooses it and can leave (Restraint and Seclusion policy)');
+});
+
+// Every sentence opens with the staff role ("The Classroom Teacher should…"),
+// so a "their" before the student is named reads as the adult's own.
+test('pronouns only follow the student\'s name', async () => {
+  const bad = await page.evaluate(() => ITEMS.map(it => [it.id, it.at]).concat(RSUP.map(r => [r.id, r.wording]))
+    .filter(([, text]) => {
+      const p = String(text).search(/\{(heshethey|himherthem|hishertheir)\}/);
+      const n = String(text).indexOf('{preferredName}');
+      return p >= 0 && (n < 0 || n > p);
+    }).map(([id, text]) => id + ': ' + text));
+  assert.deepEqual(bad, [], 'name the student before using a pronoun token');
 });
 
 test('every library record is complete', async () => {

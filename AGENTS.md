@@ -72,12 +72,20 @@ Each adjustment in `items` has, among other fields:
   3 Substantial, 4 Extensive (the Victorian Disability Inclusion levels).
 
 Tokens: `{preferredName}`, and the pronoun tokens `{heshethey}`,
-`{himherthem}`, `{hishertheir}`, which render as they, them and their.
+`{himherthem}`, `{hishertheir}`, which render as they, them and their. A
+pronoun token may only come **after** `{preferredName}` in the same text.
+Because each sentence starts with the staff role, "Carry {hishertheir} bag"
+reads as staff carrying their own bag. Write "Carry {preferredName}'s bag".
 
 Wording rules:
 
-- Australian English. Plain, respectful, strengths-based language. No deficit or
-  compliance framing.
+- Australian English ("program", not "programme"). Plain, respectful,
+  strengths-based language. No deficit or compliance framing, and no jargon a
+  family wouldn't know.
+- Staff provide the equipment and support the student to use it. "Use pencil
+  grips" reads as the teacher using them.
+- Reducing demands or changing expectations needs a safeguard: say it
+  preserves the intended learning, or that it follows the agreed plan.
 - **Never plan restraint or seclusion.** Victorian policy prohibits including
   them in any student plan. Calm, safe and recovery spaces must say the student
   chooses them and is always free to leave.
