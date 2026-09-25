@@ -38,7 +38,7 @@ for (const audience of ['staff', 'support', 'family', 'student']) {
       return ITEMS.map(it => [it.id, recommendationText('item', it, { level: it.l }, false)])
         .concat(RSUP.map(r => [r.id, recommendationText('team', r, {}, false)]));
     }, audience);
-    assert.equal(rows.length, 686 + 93, 'library size changed: update this test if that was intended');
+    assert.equal(rows.length, 702 + 97, 'library size changed: update this test if that was intended');
     const problems = [];
     for (const [id, text] of rows) {
       if (!/^\S.*\.$/.test(text)) problems.push(`${id}: does not end as a sentence: ${text}`);
@@ -101,6 +101,26 @@ test('adjustments carry no drafting tag; only recorded implementations are label
   assert.ok(r.logRecorded.startsWith('[Implementation record] '), 'a recorded implementation is labelled in the log audience');
   assert.ok(!r.logProposed.startsWith('['), 'an adjustment that is only proposed is not labelled');
   assert.equal(r.texts.filter(t => t.startsWith('[Implementation record]')).length, 1, 'the label appears only for the recorded pick in the log audience');
+});
+
+// "Evidence to monitor" and "How support will fade" must fit the activity. Before
+// September 2026 the whole library shared two generic versions.
+test('evidence and fading are specific to each activity', async () => {
+  const r = await page.evaluate(() => {
+    const sets = new Map();   // evidence set -> activities using it (non-safety items)
+    ITEMS.filter(i => !i.sc).forEach(i => {
+      const k = (i.ev || []).join('|');
+      if (!sets.has(k)) sets.set(k, new Set());
+      sets.get(k).add(i.a);
+    });
+    const shared = [...sets.values()].filter(s => s.size > 1).map(s => [...s].map(a => ACTS[a]).join(', '));
+    const missing = ITEMS.filter(i => !(i.ev || []).length || !String(i.ind || '').trim()).map(i => i.id);
+    const safetyFade = ITEMS.filter(i => i.sc && !/only through|only on|only when|never reduced informally/i.test(i.ind)).map(i => i.id);
+    return { shared, missing, safetyFade };
+  });
+  assert.deepEqual(r.missing, [], 'every adjustment needs evidence and a fading plan');
+  assert.deepEqual(r.shared, [], 'activities must not share one generic evidence set');
+  assert.deepEqual(r.safetyFade, [], 'safety-critical support may only change through a plan review');
 });
 
 test('every library record is complete', async () => {
