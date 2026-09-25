@@ -32,7 +32,10 @@ readable. Each change on its own:
 
 Apply these to the library source (the spreadsheet or JSON the build reads).
 
-1. **143 wording corrections and 31 access-outcome fixes.** Every one is in
+1. **148 wording corrections and 31 access-outcome fixes.** 143 fix grammar,
+   vagueness or truncation. 5 make clear that calm and recovery spaces are
+   chosen by the student and always free to leave, so they cannot be read as
+   planned seclusion, which the Victorian Restraint and Seclusion policy prohibits. Every one is in
    [`../library/corrections.csv`](../library/corrections.csv) with its ID, the
    old text, the new text and the reason. `at` is the wording shown in the app.
    Set `ac` to the same text with `{preferredName}` replaced by "the student",
