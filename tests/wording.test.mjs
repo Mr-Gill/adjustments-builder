@@ -38,7 +38,7 @@ for (const audience of ['staff', 'support', 'family', 'student']) {
       return ITEMS.map(it => [it.id, recommendationText('item', it, { level: it.l }, false)])
         .concat(RSUP.map(r => [r.id, recommendationText('team', r, {}, false)]));
     }, audience);
-    assert.equal(rows.length, 702 + 97, 'library size changed: update this test if that was intended');
+    assert.equal(rows.length, 705 + 99, 'library size changed: update this test if that was intended');
     const problems = [];
     for (const [id, text] of rows) {
       if (!/^\S.*\.$/.test(text)) problems.push(`${id}: does not end as a sentence: ${text}`);

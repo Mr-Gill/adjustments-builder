@@ -343,13 +343,12 @@
     {
       "key": "visiting_teacher",
       "label": "Visiting Teacher",
-      "hint": "Department Visiting Teacher Service for hearing, vision, physical or health impairment. Advises staff, sets up equipment and supports access to learning and assessment.",
+      "hint": "Department Visiting Teacher Service for students who are deaf or hard of hearing, blind or have low vision, or have a physical disability or health condition. Advises staff, demonstrates equipment and supports access to learning and assessment.",
       "also": [
         "Visiting Teacher (Hearing)",
         "Visiting Teacher (Vision)",
         "Teacher of the Deaf",
-        "Vision Teacher",
-        "Itinerant Teacher"
+        "VT"
       ]
     }
   ],
@@ -2411,7 +2410,7 @@
       "tier": 2,
       "category": "Coordination and planning",
       "action": "Give classroom-ready advice on access",
-      "wording": "The {role} should assess how {preferredName}'s hearing or vision affects access at school and give staff written advice they can use in an ordinary lesson, reviewed at least annually with the family, so adjustments match {preferredName}'s current needs.",
+      "wording": "The {role} should assess how {preferredName}'s hearing, vision, physical disability or health condition affects access at school and give staff written advice they can use in an ordinary lesson, reviewed at least annually with the family, so adjustments match {preferredName}'s current needs.",
       "frequency": "at the start of the year and reviewed at least annually",
       "intensity": "Written advice naming what staff do and when",
       "evidence": [
@@ -2458,7 +2457,7 @@
       "tier": 3,
       "category": "Assessment and curriculum access",
       "action": "Arrange accessible formats in time",
-      "wording": "The {role} should arrange accessible formats for {preferredName}, such as braille, tactile graphics, large print or captioned media, with enough notice that {preferredName} uses them at the same time as the class.",
+      "wording": "The {role} should arrange accessible formats for {preferredName}, such as braille, tactile graphics or large print, through the Statewide Vision Resource Centre or another agreed provider, with enough notice that {preferredName} uses them at the same time as the class.",
       "frequency": "for each unit of work, with the teaching program shared in advance",
       "intensity": "Formats prepared ahead of each unit",
       "evidence": [
@@ -2504,6 +2503,60 @@
         "Listening",
         "Reading",
         "Writing"
+      ]
+    },
+    {
+      "id": "R-CT-05",
+      "role": "classroom_teacher",
+      "tier": 2,
+      "category": "Coordination and planning",
+      "action": "Share lesson content ahead with the interpreter and Visiting Teacher",
+      "wording": "The {role} should share lesson content, key vocabulary and media with {preferredName}'s interpreter and Visiting Teacher at least a week ahead, so interpreting and accessible formats are ready for the lesson.",
+      "frequency": "at least a week before each unit or lesson sequence",
+      "intensity": "Planned sharing of lesson materials",
+      "evidence": [
+        "materials shared on time",
+        "lessons where interpreting or formats were not ready"
+      ],
+      "flags": {
+        "plan": 1
+      },
+      "activities": [
+        0,
+        1,
+        2
+      ],
+      "actLabels": [
+        "Watching",
+        "Listening",
+        "Reading"
+      ]
+    },
+    {
+      "id": "R-DIL-09",
+      "role": "di_lead",
+      "tier": 3,
+      "category": "Coordination and planning",
+      "action": "Timetable specialist instruction without always missing the same subject",
+      "wording": "The {role} should timetable the specialist instruction agreed with the Visiting Teacher, such as braille, assistive technology and orientation and mobility, and rotate the times so {preferredName} does not miss the same subject each time.",
+      "frequency": "each term, when the timetable is set",
+      "intensity": "Timetabled specialist sessions on a rotating schedule",
+      "evidence": [
+        "specialist sessions delivered as timetabled",
+        "subjects missed, and how often"
+      ],
+      "flags": {
+        "plan": 1
+      },
+      "activities": [
+        0,
+        2,
+        29
+      ],
+      "actLabels": [
+        "Watching",
+        "Reading",
+        "Moving From Place to Place"
       ]
     }
   ],
@@ -2826,8 +2879,8 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Describe aloud what is written, pointed to or shown, and say the student's name before speaking to them.",
-      "at": "Describe aloud what is written, pointed to or shown, and say {preferredName}'s name before speaking to {himherthem}",
+      "ac": "Say the student's name before speaking to them, and read aloud whatever is written or pointed to.",
+      "at": "Say {preferredName}'s name before speaking to {himherthem}, and read aloud whatever is written or pointed to",
       "ao": "access and interpret visual information used for learning",
       "ctx": "visual information; demonstrations; images; screen-based content",
       "f": "whenever information is written, shown or demonstrated",
@@ -2899,6 +2952,38 @@
       "ao": "access and interpret visual information used for learning",
       "ctx": "visual information; demonstrations; images; screen-based content",
       "f": "at the start of each term, and whenever the room changes",
+      "i": "Regular, planned and personalised; at specific times/settings",
+      "ev": [
+        "key visual information {preferredName} identifies without help",
+        "the format {preferredName} uses (print size, zoom, contrast or description)",
+        "visual fatigue, and breaks needed in long visual tasks",
+        "board or screen content missed, and why"
+      ],
+      "sv": "Which part of this support helps you most when working with visual information, demonstrations, images or screen-based content? What should we keep, change or fade?",
+      "ind": "Teach {preferredName} to set up and ask for the formats and settings that work. Hand over one step at a time, starting with the most familiar tasks, and keep the adjustment wherever vision itself is the barrier.",
+      "sc": 0,
+      "rp": 0,
+      "rt": 0,
+      "cm": 0,
+      "st": "working_draft"
+    },
+    {
+      "id": "D1-A01-SUP-04A",
+      "d": 0,
+      "a": 0,
+      "l": 2,
+      "c": 1,
+      "rk": [
+        "classroom_teacher"
+      ],
+      "sk": [],
+      "rq": "",
+      "ta": true,
+      "ac": "Seat the student where they can best see the board, demonstrations and the teacher's face.",
+      "at": "Seat {preferredName} where {heshethey} can best see the board, demonstrations and the teacher's face",
+      "ao": "access and interpret visual information used for learning",
+      "ctx": "visual information; demonstrations; images; screen-based content",
+      "f": "in every lesson, reviewed when the room or seating plan changes",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
         "key visual information {preferredName} identifies without help",
@@ -3201,8 +3286,8 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Provide materials in the student's agreed format, such as large print, high contrast or digital, before the lesson starts.",
-      "at": "Provide materials in {preferredName}'s agreed format, such as large print, high contrast or digital, before the lesson starts",
+      "ac": "Have materials ready in the student's agreed format before the lesson starts.",
+      "at": "Have materials ready in {preferredName}'s agreed format before the lesson starts",
       "ao": "access and interpret visual information used for learning",
       "ctx": "visual information; demonstrations; images; screen-based content",
       "f": "for every lesson and task",
@@ -3399,15 +3484,16 @@
       "l": 4,
       "c": 2,
       "rk": [
-        "support_staff"
+        "classroom_teacher"
       ],
       "sk": [
+        "support_staff",
         "visiting_teacher"
       ],
       "rq": "",
       "ta": true,
-      "ac": "Prepare tactile graphics and models in advance with the Visiting Teacher, so the student explores them at the same time as the class.",
-      "at": "Prepare tactile graphics and models in advance with the Visiting Teacher, so {preferredName} explores them at the same time as the class",
+      "ac": "Share diagrams, maps and models in advance with the staff preparing tactile versions, in time for them to be ready when the class uses them.",
+      "at": "Share diagrams, maps and models in advance with the staff preparing tactile versions, in time for them to be ready when the class uses them",
       "ao": "access and interpret visual information used for learning",
       "ctx": "visual information; demonstrations; images; screen-based content",
       "f": "for every lesson that uses diagrams, maps or models",
@@ -3445,13 +3531,13 @@
       "f": "as part of everyday practice",
       "i": "Ordinary supports/resources available in the setting",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3479,13 +3565,47 @@
       "f": "as needed during relevant tasks or routines",
       "i": "Brief, occasional; within usual classroom practice",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
+      "sc": 0,
+      "rp": 0,
+      "rt": 0,
+      "cm": 0,
+      "st": "working_draft"
+    },
+    {
+      "id": "D1-A02-DT-02A",
+      "d": 0,
+      "a": 1,
+      "l": 1,
+      "c": 5,
+      "rk": [
+        "classroom_teacher"
+      ],
+      "sk": [
+        "support_staff"
+      ],
+      "rq": "",
+      "ta": true,
+      "ac": "Face the class when speaking, keep lips visible, and repeat other students' questions and answers aloud.",
+      "at": "Face the class when speaking, keep lips visible, and repeat other students' questions and answers aloud",
+      "ao": "access and understand spoken information",
+      "ctx": "spoken instructions; class discussion; announcements; audio content",
+      "f": "whenever speaking to the class",
+      "i": "Brief, occasional; within usual classroom practice",
+      "ev": [
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
+        "use of hearing technology or captions, and any faults",
+        "how often {preferredName} asks for repetition or checks with a peer",
+        "listening fatigue across the day"
+      ],
+      "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3513,13 +3633,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 1,
@@ -3547,13 +3667,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3581,13 +3701,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3615,13 +3735,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3649,13 +3769,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3683,13 +3803,13 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3718,50 +3838,16 @@
       "f": "in every relevant lesson",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 1,
-      "cm": 0,
-      "st": "working_draft"
-    },
-    {
-      "id": "D1-A02-SUP-03B",
-      "d": 0,
-      "a": 1,
-      "l": 2,
-      "c": 5,
-      "rk": [
-        "classroom_teacher"
-      ],
-      "sk": [
-        "support_staff"
-      ],
-      "rq": "",
-      "ta": true,
-      "ac": "Face the class when speaking, keep lips visible, and repeat other students' questions and answers aloud.",
-      "at": "Face the class when speaking, keep lips visible, and repeat other students' questions and answers aloud",
-      "ao": "access and understand spoken information",
-      "ctx": "spoken instructions; class discussion; announcements; audio content",
-      "f": "whenever speaking to the class",
-      "i": "Regular, planned and personalised; at specific times/settings",
-      "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
-        "use of hearing technology or captions, and any faults",
-        "how often {preferredName} asks for repetition or checks with a peer",
-        "listening fatigue across the day"
-      ],
-      "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
-      "sc": 0,
-      "rp": 0,
-      "rt": 0,
       "cm": 0,
       "st": "working_draft"
     },
@@ -3784,13 +3870,13 @@
       "f": "before giving key spoken information",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3818,13 +3904,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3852,13 +3938,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3886,13 +3972,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3920,13 +4006,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 1,
@@ -3954,13 +4040,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -3988,13 +4074,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -4022,13 +4108,13 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 0,
@@ -4049,20 +4135,20 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Check the student's hearing devices and the remote microphone, and report faults to the family and Visiting Teacher the same day.",
-      "at": "Check {preferredName}'s hearing devices and the remote microphone, and report faults to the family and Visiting Teacher the same day",
+      "ac": "Check the student's hearing devices and the remote microphone, as shown by the Visiting Teacher, and report faults to the family and Visiting Teacher the same day.",
+      "at": "Check {preferredName}'s hearing devices and the remote microphone, as shown by the Visiting Teacher, and report faults to the family and Visiting Teacher the same day",
       "ao": "access and understand spoken information",
       "ctx": "spoken instructions; class discussion; announcements; audio content",
       "f": "at the start of every school day",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 0,
       "rt": 1,
@@ -4083,22 +4169,56 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Arrange an Auslan interpreter or Auslan-proficient staff member for learning and assessment, as set out in the plan.",
-      "at": "Arrange an Auslan interpreter or Auslan-proficient staff member for learning and assessment, as set out in the plan",
+      "ac": "Arrange the qualified Auslan interpreter or the Auslan-trained education support staff named in the plan, for the lessons and assessments the plan names.",
+      "at": "Arrange the qualified Auslan interpreter or the Auslan-trained education support staff named in the plan, for the lessons and assessments the plan names",
       "ao": "access and understand spoken information",
       "ctx": "spoken instructions; class discussion; announcements; audio content",
-      "f": "for every relevant lesson and assessment",
+      "f": "before each term, and whenever the timetable changes",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 1,
+      "rt": 0,
+      "cm": 0,
+      "st": "working_draft"
+    },
+    {
+      "id": "D1-A02-SUB-04A",
+      "d": 0,
+      "a": 1,
+      "l": 3,
+      "c": 2,
+      "rk": [
+        "classroom_teacher"
+      ],
+      "sk": [
+        "support_staff"
+      ],
+      "rq": "",
+      "ta": true,
+      "ac": "Provide a notetaker or copies of the teacher's notes, leaving the student free to watch the interpreter or speaker.",
+      "at": "Provide a notetaker or copies of the teacher's notes, leaving {preferredName} free to watch the interpreter or speaker",
+      "ao": "access and understand spoken information",
+      "ctx": "spoken instructions; class discussion; announcements; audio content",
+      "f": "in every lesson with extended spoken input",
+      "i": "Frequent, personalised; on most days/relevant settings",
+      "ev": [
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
+        "use of hearing technology or captions, and any faults",
+        "how often {preferredName} asks for repetition or checks with a peer",
+        "listening fatigue across the day"
+      ],
+      "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
+      "sc": 0,
+      "rp": 0,
       "rt": 0,
       "cm": 0,
       "st": "working_draft"
@@ -4124,13 +4244,13 @@
       "f": "consistently throughout the activity or across relevant settings in the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 1,
       "rt": 0,
@@ -4150,22 +4270,22 @@
         "support_staff",
         "visiting_teacher"
       ],
-      "rq": "Auslan-proficient staff or an educational interpreter, as documented",
+      "rq": "",
       "ta": true,
-      "ac": "Teach and communicate in Auslan and English, as set out in the student's bilingual learning plan.",
-      "at": "Teach and communicate in Auslan and English, as set out in {preferredName}'s bilingual learning plan",
-      "ao": "access and understand spoken information",
+      "ac": "Deliver every lesson with the Auslan interpreter or Auslan-trained staff named in the student's plan, using both Auslan and English.",
+      "at": "Deliver every lesson with the Auslan interpreter or Auslan-trained staff named in {preferredName}'s plan, using both Auslan and English",
+      "ao": "access learning and class communication in Auslan and English",
       "ctx": "spoken instructions; class discussion; announcements; audio content",
       "f": "throughout the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "spoken instructions {preferredName} follows first time, without repetition",
+        "instructions {preferredName} follows first time, through speech, technology or an interpreter",
         "use of hearing technology or captions, and any faults",
         "how often {preferredName} asks for repetition or checks with a peer",
         "listening fatigue across the day"
       ],
       "sv": "Which part of this support helps you most when working with spoken instructions, class discussion, announcements or audio content? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology and captions wherever hearing itself is the barrier.",
+      "ind": "Teach {preferredName} to check equipment, choose a good position and ask for repetition. Reduce adult checks as these become independent, and keep technology, captions and interpreting wherever hearing itself is the barrier.",
       "sc": 0,
       "rp": 1,
       "rt": 1,
@@ -5195,8 +5315,8 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Provide braille versions of all texts, prepared in advance so the student reads them at the same time as the class.",
-      "at": "Provide braille versions of all texts, prepared in advance so {preferredName} reads them at the same time as the class",
+      "ac": "Give every text to the Visiting Teacher with the agreed notice, and hand the student the braille version when the class receives the print.",
+      "at": "Give every text to the Visiting Teacher with the agreed notice, and hand {preferredName} the braille version when the class receives the print",
       "ao": "access written information and demonstrate comprehension",
       "ctx": "dense text; written instructions; subject-specific texts; word problems",
       "f": "for every text used in class",
@@ -7202,14 +7322,14 @@
       "f": "at specific times through the week or in identified tasks or settings",
       "i": "Regular, planned and personalised; at specific times/settings",
       "ev": [
-        "support delivered as set out in the plan, by the named trained staff",
-        "incidents, discomfort or near misses, recorded the same day",
-        "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "time on task compared with the start of the plan",
+        "prompts needed to start and to return to work",
+        "use of timers, breaks or workspaces without reminders",
+        "tasks completed in the agreed time"
       ],
       "sv": "Which part of this support helps you most when working with lengthy, unfamiliar, multi-step or independent learning tasks? What should we keep, change or fade?",
-      "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
-      "sc": 1,
+      "ind": "Teach {preferredName} to notice when attention drifts and use the agreed strategy. Space prompts further apart as time on task improves, and keep the environmental supports that help.",
+      "sc": 0,
       "rp": 2,
       "rt": 1,
       "cm": 0,
@@ -8953,7 +9073,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with multi-step, unfamiliar, abstract or problem-solving tasks? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -9359,7 +9479,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with arrival, class preparation, transitions, packing up or routine procedures? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -11483,7 +11603,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with assessment, time limits, unexpected change or sensory or social demands? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -12059,7 +12179,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with transitions, new situations, changes or emotionally demanding interactions? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -20510,6 +20630,40 @@
       "st": "working_draft"
     },
     {
+      "id": "D4-A07-SUB-03A",
+      "d": 3,
+      "a": 22,
+      "l": 3,
+      "c": 9,
+      "rk": [
+        "classroom_teacher"
+      ],
+      "sk": [
+        "support_staff"
+      ],
+      "rq": "",
+      "ta": true,
+      "ac": "Alert the student with a visual or vibrating signal and assign a named staff member to guide them, as set out in the emergency plan.",
+      "at": "Alert {preferredName} with a visual or vibrating signal and assign a named staff member to guide {himherthem}, as set out in the emergency plan",
+      "ao": "recognise and respond to risks while participating safely",
+      "ctx": "classrooms; yard; transitions; practical subjects; excursions; unfamiliar settings",
+      "f": "in every drill and emergency",
+      "i": "Frequent, personalised; on most days/relevant settings",
+      "ev": [
+        "situations where {preferredName} recognised and avoided a risk",
+        "incidents and near misses, recorded the same day",
+        "supervision provided as set out in the safety plan",
+        "safety routines {preferredName} follows independently"
+      ],
+      "sv": "Which part of this support helps you most when working with classrooms, yard, transitions, practical subjects, excursions or unfamiliar settings? What should we keep, change or fade?",
+      "ind": "Supervision reduces only through a documented review of the safety plan. Teach safety routines in familiar settings first, then practise them in new ones.",
+      "sc": 1,
+      "rp": 1,
+      "rt": 1,
+      "cm": 0,
+      "st": "working_draft"
+    },
+    {
       "id": "D4-A07-EXT-01A",
       "d": 3,
       "a": 22,
@@ -24242,7 +24396,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with school bag, books, equipment, technology or materials? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -24901,7 +25055,7 @@
         "support delivered as set out in the plan, by the named trained staff",
         "incidents, discomfort or near misses, recorded the same day",
         "{preferredName}'s own view of how the support is working",
-        "date of the next plan review"
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with handwriting, page turning, tools, equipment or device use? What should we keep, change or fade?",
       "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
@@ -25190,8 +25344,8 @@
       ],
       "rq": "",
       "ta": true,
-      "ac": "Follow the orientation and mobility advice for routes around the school, and tell the student about layout changes in advance.",
-      "at": "Follow the orientation and mobility advice for routes around the school, and tell {preferredName} about layout changes in advance",
+      "ac": "Follow the orientation and mobility specialist's advice for routes around the school, and tell the student about layout changes in advance.",
+      "at": "Follow the orientation and mobility specialist's advice for routes around the school, and tell {preferredName} about layout changes in advance",
       "ao": "move safely between school settings and access activities",
       "ctx": "movement between classes; yard; excursions; uneven or crowded areas",
       "f": "whenever moving around the school",
@@ -25263,14 +25417,14 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "routes {preferredName} travels safely and independently",
-        "transition times compared with peers",
-        "use of mobility equipment, and any faults",
-        "places {preferredName} cannot yet reach, and why"
+        "support delivered as set out in the plan, by the named trained staff",
+        "incidents, discomfort or near misses, recorded the same day",
+        "{preferredName}'s own view of how the support is working",
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with movement between classes, yard, excursions or uneven or crowded areas? What should we keep, change or fade?",
-      "ind": "Teach familiar routes first, then new ones, following orientation and mobility or physiotherapy advice. Remove barriers in the environment rather than asking {preferredName} to work around them.",
-      "sc": 0,
+      "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
+      "sc": 1,
       "rp": 0,
       "rt": 0,
       "cm": 0,
@@ -25560,14 +25714,14 @@
       "f": "consistently throughout the activity or across relevant settings in the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "routes {preferredName} travels safely and independently",
-        "transition times compared with peers",
-        "use of mobility equipment, and any faults",
-        "places {preferredName} cannot yet reach, and why"
+        "support delivered as set out in the plan, by the named trained staff",
+        "incidents, discomfort or near misses, recorded the same day",
+        "{preferredName}'s own view of how the support is working",
+        "what was agreed at the last plan review"
       ],
       "sv": "Which part of this support helps you most when working with movement between classes, yard, excursions or uneven or crowded areas? What should we keep, change or fade?",
-      "ind": "Teach familiar routes first, then new ones, following orientation and mobility or physiotherapy advice. Remove barriers in the environment rather than asking {preferredName} to work around them.",
-      "sc": 0,
+      "ind": "This support protects {preferredName}'s safety, so it is never reduced informally. At each plan review, agree any part {preferredName} can take on safely, teach it, and record the change in the plan.",
+      "sc": 1,
       "rp": 1,
       "rt": 0,
       "cm": 0,
@@ -25757,14 +25911,14 @@
       "f": "on most days or across most relevant tasks or settings",
       "i": "Frequent, personalised; on most days/relevant settings",
       "ev": [
-        "time {preferredName} is comfortable and able to take part",
-        "changes of position, and who started them",
-        "signs of discomfort or fatigue",
-        "use of equipment as prescribed"
+        "positioning and transfers carried out as prescribed, by trained staff",
+        "pain, pressure or fatigue, recorded and reported",
+        "equipment checks and faults",
+        "{preferredName}'s comfort, preferences and participation"
       ],
       "sv": "Which part of this support helps you most when working with seating, standing, transfers, posture or positioning for learning or care? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to notice discomfort and ask for a change. Reduce support only on therapy advice.",
-      "sc": 0,
+      "ind": "Positioning programs and manual handling change only on therapy advice and plan review. Teach {preferredName} to tell staff when a change of position is needed.",
+      "sc": 1,
       "rp": 0,
       "rt": 0,
       "cm": 0,
@@ -25955,14 +26109,14 @@
       "f": "consistently throughout the activity or across relevant settings in the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "time {preferredName} is comfortable and able to take part",
-        "changes of position, and who started them",
-        "signs of discomfort or fatigue",
-        "use of equipment as prescribed"
+        "positioning and transfers carried out as prescribed, by trained staff",
+        "pain, pressure or fatigue, recorded and reported",
+        "equipment checks and faults",
+        "{preferredName}'s comfort, preferences and participation"
       ],
       "sv": "Which part of this support helps you most when working with seating, standing, transfers, posture or positioning for learning or care? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to notice discomfort and ask for a change. Reduce support only on therapy advice.",
-      "sc": 0,
+      "ind": "Positioning programs and manual handling change only on therapy advice and plan review. Teach {preferredName} to tell staff when a change of position is needed.",
+      "sc": 1,
       "rp": 1,
       "rt": 0,
       "cm": 0,
@@ -26021,14 +26175,14 @@
       "f": "consistently throughout the activity or across relevant settings in the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "time {preferredName} is comfortable and able to take part",
-        "changes of position, and who started them",
-        "signs of discomfort or fatigue",
-        "use of equipment as prescribed"
+        "positioning and transfers carried out as prescribed, by trained staff",
+        "pain, pressure or fatigue, recorded and reported",
+        "equipment checks and faults",
+        "{preferredName}'s comfort, preferences and participation"
       ],
       "sv": "Which part of this support helps you most when working with seating, standing, transfers, posture or positioning for learning or care? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to notice discomfort and ask for a change. Reduce support only on therapy advice.",
-      "sc": 0,
+      "ind": "Positioning programs and manual handling change only on therapy advice and plan review. Teach {preferredName} to tell staff when a change of position is needed.",
+      "sc": 1,
       "rp": 1,
       "rt": 0,
       "cm": 0,
@@ -26054,14 +26208,14 @@
       "f": "consistently throughout the activity or across relevant settings in the school day",
       "i": "Sustained, highly individualised; consistently across activity/settings",
       "ev": [
-        "time {preferredName} is comfortable and able to take part",
-        "changes of position, and who started them",
-        "signs of discomfort or fatigue",
-        "use of equipment as prescribed"
+        "positioning and transfers carried out as prescribed, by trained staff",
+        "pain, pressure or fatigue, recorded and reported",
+        "equipment checks and faults",
+        "{preferredName}'s comfort, preferences and participation"
       ],
       "sv": "Which part of this support helps you most when working with seating, standing, transfers, posture or positioning for learning or care? What should we keep, change or fade?",
-      "ind": "Teach {preferredName} to notice discomfort and ask for a change. Reduce support only on therapy advice.",
-      "sc": 0,
+      "ind": "Positioning programs and manual handling change only on therapy advice and plan review. Teach {preferredName} to tell staff when a change of position is needed.",
+      "sc": 1,
       "rp": 1,
       "rt": 0,
       "cm": 0,
