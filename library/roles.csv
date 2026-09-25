@@ -1,0 +1,20 @@
+﻿key,label,description,also_known_as
+classroom_teacher,Classroom Teacher,The subject or classroom teacher who teaches the student.,Subject Teacher; Teacher; Home Group Teacher
+support_staff,Education Support Staff,Staff who provide agreed in-class or personal assistance under teacher and plan direction. Most schools have one name for this — pick or type yours.,Learning Mentor; Inclusion Officer; Teacher's Aide; Integration Aide; Learning Support Officer; Education Support
+di_lead,Disability Inclusion Leader,"Coordinates plans, meetings, evidence and funding processes.",Inclusion Lead; DI Coordinator; Learning Diversity Leader; SENCO
+inclusion_leader,Inclusion Leader,"Whole-school inclusive practice, systems and professional learning.",Learning Diversity Leader; Inclusive Practice Leader
+wellbeing,Wellbeing Lead,"Wellbeing coordination, check-ins, re-engagement, safe spaces.",Wellbeing Coordinator; Student Wellbeing Leader; Head of Wellbeing
+mh_practitioner,Mental Health Practitioner,"In-school counselling, psychology or mental health support.",School Counsellor; School Psychologist; Mental Health in Schools Practitioner
+principal_class,Principal Class,"Principal, assistant principal or equivalent leadership.",Principal; Assistant Principal; Head of School
+year_level_leader,Year Level Leader,"Year level, house or sub-school leadership.",House Leader; Sub-school Leader; Head of Year
+literacy_lead,Literacy Lead,"Literacy teaching, data and intervention across the school.",Learning Specialist – Literacy; Literacy Coach; English Learning Area Leader
+numeracy_lead,Numeracy Lead,"Numeracy teaching, data and intervention across the school.",Learning Specialist – Numeracy; Numeracy Coach; Mathematics Learning Area Leader
+behaviour_lead,Behaviour Lead,"Behaviour support planning, coaching and incident review.",Positive Behaviour Leader; Engagement Leader; Head of Student Management
+psc_lead,Personal and Social Capabilities Lead,Explicit teaching of self-management and social skills.,PSC Leader; Social and Emotional Learning Leader; Respectful Relationships Leader
+cultural_lead,Cultural Lead,"Cultural safety, community connection and family partnership.",Koorie Engagement Support Officer; Multicultural Education Aide; Cultural Liaison
+daily_organiser,Daily Organiser,"Relief staffing, cover and timetable changes on the day.",Relief Coordinator; Timetabler
+support_coordinator,Support Coordinator,"Coordinates ES staff on the day, triages DI and student needs and handles DI admin.",DI Coordinator; Integration Coordinator; ES Coordinator; Learning Support Coordinator; Inclusion Support Coordinator; Hub Coordinator; Student Support Coordinator
+nurse,School Nurse,"Health support plans, medication and health procedures.",Secondary School Nurse; Health Coordinator
+first_aid,First Aid Officer,Day-to-day first aid response and health records.,First Aid Coordinator; Sick Bay Officer
+allied_health,Allied Health Professional,"Speech, OT, physio or psychology — internal or external.",Speech Pathologist; Occupational Therapist; Physiotherapist
+transition_lead,Transition Coordinator,"Transition in, between years, and to post-school pathways.",Pathways Leader; Careers Coordinator; Transition Leader

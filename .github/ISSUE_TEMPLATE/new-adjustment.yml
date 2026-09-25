@@ -1,0 +1,41 @@
+name: Suggest a new adjustment
+description: Something schools do that the library does not cover yet.
+title: "[New adjustment] "
+labels: ["library", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please **do not include any student's name or identifying details**, as issues are public.
+  - type: input
+    id: activity
+    attributes:
+      label: Activity
+      description: Which of the 31 activities it belongs to (for example Reading, Toileting, Conversation).
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level of adjustment
+      options:
+        - Present Environment
+        - Differentiated Teaching
+        - Supplementary
+        - Substantial
+        - Extensive
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: wording
+    attributes:
+      label: Suggested wording
+      description: Start with what staff do, for example "Provide a remote microphone system and check it is working at the start of each lesson".
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who would usually do it?
+      placeholder: Classroom Teacher, Education Support Staff, School Nurse...

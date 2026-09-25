@@ -1,0 +1,41 @@
+name: Adjustment correction
+description: Something in an adjustment's wording is wrong, unclear, unsafe or at the wrong level.
+title: "[Correction] "
+labels: ["library"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the library. Please **do not include any student's name or identifying details**, as issues are public.
+  - type: input
+    id: adjustment-id
+    attributes:
+      label: Adjustment ID
+      description: From the app's detail view, or the `id` column in library/adjustments.csv (for example D1-A03-SUP-01A).
+      placeholder: D1-A03-SUP-01A
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is the problem?
+      options:
+        - The sentence does not read properly
+        - It is unclear who does what, or how often
+        - It is at the wrong level of adjustment
+        - It could be unsafe, or conflicts with policy
+        - It lowers the learning goal when it should not
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should it say instead?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why? (optional)
+      description: Any advice, policy or practice this is based on.
