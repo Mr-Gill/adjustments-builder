@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Adjustments Builder</title>
+<style>
+{{styles}}</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <h1>Adjustments Builder</h1>
+    <span class="who" id="whoami"></span>
+    <select class="mobonly" id="mobnav" aria-label="Go to"></select>
+    <span class="spacer"></span>
+    <span class="tiny" id="savedhint">Saved on this device</span>
+    <span class="tiny" id="appversion" title="Build identifier — quote this when reporting a problem">{{version}}</span>
+    <button class="plain small" id="btn-about">About</button>
+    <button class="plain small" id="btn-onboard">Setup guide</button>
+  </header>
+  <div class="shell">
+    <nav class="side" id="sidenav"></nav>
+    <main id="main"></main>
+  </div>
+  <div class="bar noprint" id="bar"></div>
+</div>
+<script id="adj-data" type="application/json">{{data}}</script>
+<script>{{script}}</script>
+</body>
+</html>

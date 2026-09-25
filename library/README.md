@@ -32,5 +32,7 @@ Every record is still a **working draft**. It is not departmental policy or
 approved guidance. The same licence applies as the rest of the repository:
 CC BY-NC-SA 4.0.
 
-`app.html` is the source of truth for the live app. These files are exported
-from it and should be regenerated whenever the library changes.
+The library's source is [`data/library.json`](../data/library.json).
+`adjustments.csv`, `role-supports.csv` and `roles.csv` are generated from it by
+`python3 tools/build.py`, so edit the JSON, not these files. `corrections.csv`
+is a fixed record of the September 2026 review.

@@ -87,12 +87,28 @@ include a student's name or details in an issue.
 
 ## For maintainers
 
-This file is built from the source repository; do not edit `app.html` by hand.
-Rebuild with `python3 07_Workflow/build_adjustments_app.py` and copy the result
-here as `app.html`.
+This repository is the source. `app.html` is built from it, so don't edit
+`app.html` by hand:
 
-**Exception, September 2026:** the review fixes were made directly in `app.html`
-here, because the source repository is not on GitHub. Before the next build,
-port them into the source using [`docs/PORTING.md`](docs/PORTING.md), or the
-next release will undo them. After a library change, regenerate the CSV files
-in `library/`.
+| To change | Edit |
+|---|---|
+| Adjustment wording or the library | `data/library.json` |
+| How the app works | `src/app.js` |
+| How it looks | `src/styles.css` |
+| The page skeleton, including the Content Security Policy | `src/shell.html` |
+
+Then rebuild and test:
+
+```sh
+python3 tools/build.py   # writes app.html and library/*.csv
+npm ci && npm test       # wording and app tests in headless Chromium
+```
+
+Commit the source change and the rebuilt files together. Every pull request is
+checked automatically: the build must match the source and the tests must pass.
+Bump `src/VERSION` when you release. The version shown in the app is that date
+plus a short fingerprint of the source.
+
+[`AGENTS.md`](AGENTS.md) has the rules for anyone changing the app, including AI
+coding agents such as Codex, Claude and Antigravity, and the guidelines they use
+when reviewing a pull request.

@@ -164,7 +164,7 @@ table.plain th{color:var(--muted);font-size:12px;font-weight:600}
     <select class="mobonly" id="mobnav" aria-label="Go to"></select>
     <span class="spacer"></span>
     <span class="tiny" id="savedhint">Saved on this device</span>
-    <span class="tiny" id="appversion" title="Build identifier — quote this when reporting a problem">v2026.09.13 (305399c)</span>
+    <span class="tiny" id="appversion" title="Build identifier — quote this when reporting a problem">v2026.09.25 (a70b0fe)</span>
     <button class="plain small" id="btn-about">About</button>
     <button class="plain small" id="btn-onboard">Setup guide</button>
   </header>
@@ -1242,8 +1242,10 @@ function activityPanel(ai, main, side) {
   // one search and one category filter across the single merged list
   const tools = el('div', 'tools noprint');
   const q = el('input'); q.type = 'text'; q.placeholder = 'Search\u2026'; q.value = a.q || '';
+  q.setAttribute('aria-label', 'Search ' + W('adjustment') + 's for this activity');
   q.oninput = () => { a.q = q.value; refreshAll(); };
   const cat = el('select'); cat.append(new Option('All categories', ''));
+  cat.setAttribute('aria-label', 'Category');
   const catOpts = [];
   uniq(ITEMS.filter(i => i.a === ai).map(i => i.c)).sort((x, y) => CATS[x].localeCompare(CATS[y]))
     .forEach(i => catOpts.push(['a:' + i, CATS[i]]));
@@ -1344,6 +1346,13 @@ function activityPanel(ai, main, side) {
 }
 
 /* ---------------- the option list ---------------- */
+/* A pick checkbox is named by the adjustment's own sentence, so a screen reader
+   reads what is being chosen rather than an anonymous "checkbox". */
+let optSeq = 0;
+function nameCheckbox(cb, line) {
+  line.id = 'opt-text-' + (++optSeq);
+  cb.setAttribute('aria-labelledby', line.id);
+}
 function optionRow(kind, obj, store, after, selectedLevel) {
   const id = obj.id, picked = !!store[id];
   const o = el('div', 'opt' + (picked ? ' on' : ''));
@@ -1357,6 +1366,7 @@ function optionRow(kind, obj, store, after, selectedLevel) {
   };
   const txt = el('div', 'txt');
   const line = el('div'); line.innerHTML = picked ? recommendationHtml(kind, obj, store[id]) : segHtml(wordingFor(kind, obj));
+  nameCheckbox(cb, line);
   txt.append(line);
   const meta = el('div', 'meta');
   if (kind === 'activity') {
@@ -1368,7 +1378,9 @@ function optionRow(kind, obj, store, after, selectedLevel) {
     meta.append(el('span', 'pill', obj.category));
   }
   flagsFor(kind, obj).forEach(f => meta.append(el('span', 'pill flag', f)));
-  const more = el('button', 'link', 'Details'); more.onclick = () => o.classList.toggle('open');
+  const more = el('button', 'link', 'Details');
+  more.setAttribute('aria-expanded', 'false');
+  more.onclick = () => more.setAttribute('aria-expanded', String(o.classList.toggle('open')));
   meta.append(more);
   txt.append(meta);
   const tk = v => resolvePronouns(String(v || '').replace(/\{preferredName\}/g, prefName()));
@@ -1402,6 +1414,7 @@ function customRow(obj, store, after) {
   const txt = el('div', 'txt');
   const line = el('div');
   line.innerHTML = picked ? recommendationHtml('activity', obj, cur) : esc(obj.ce.action || obj.ce.text);
+  nameCheckbox(cb, line);
   txt.append(line);
   const meta = el('div', 'meta');
   meta.append(el('span', 'pill', levelLabel(obj.l)));
@@ -1754,10 +1767,12 @@ function secTiers() {
       const tr = el('tr');
       const c1 = el('td');
       const n = el('input'); n.type = 'text'; n.value = row.label;
+      n.setAttribute('aria-label', 'Tier ' + (i + 1) + ' name');
       n.oninput = () => { row.label = n.value; bump(); };
       c1.append(n);
       const c2 = el('td');
       const sel = el('select');
+      sel.setAttribute('aria-label', 'Library tier behind tier ' + (i + 1));
       sel.append(new Option('— chosen by hand —', ''));
       [1, 2, 3].forEach(k => sel.append(new Option((TIERS[k - 1] || {}).label || ('Tier ' + k), k)));
       sel.value = row.maps || '';
@@ -1796,6 +1811,7 @@ function secRoles() {
     c1.innerHTML = '<b>' + esc(r.label) + '</b><br><span class="tiny">' + esc(r.hint || '') + '</span>';
     const c2 = el('td');
     const i = el('input'); i.type = 'text'; i.value = S.roleLabels[r.key] || ''; i.placeholder = r.label;
+    i.setAttribute('aria-label', 'What you call the ' + r.label);
     i.oninput = () => { if (i.value.trim()) S.roleLabels[r.key] = i.value.trim(); else delete S.roleLabels[r.key]; bump(); };
     c2.append(i);
     if (r.also && r.also.length) {
@@ -1809,6 +1825,7 @@ function secRoles() {
     }
     const c3 = el('td');
     const c = el('input'); c.type = 'checkbox'; c.checked = roleOn(r.key);
+    c.setAttribute('aria-label', r.label + ' is used at this school');
     c.onchange = () => { S.rolesOff = c.checked ? S.rolesOff.filter(k => k !== r.key) : uniq([...S.rolesOff, r.key]); bump(); };
     c3.append(c);
     tr.append(c1, c2, c3); t.append(tr);
@@ -1880,14 +1897,16 @@ function secEmph() {
   t.append(head);
   EMPH_PARTS.forEach(([k, label]) => {
     const tr = el('tr'); tr.append(el('td', null, label));
-    EMPH_STYLES.forEach(([v]) => {
+    EMPH_STYLES.forEach(([v, styleLabel]) => {
       const td = el('td');
       const r = el('input'); r.type = 'radio'; r.name = 'emph_' + k; r.checked = (S.emph[k] || 'none') === v;
+      r.setAttribute('aria-label', label + ': ' + styleLabel);
       r.onchange = () => { S.emph[k] = v; bump(); };
       td.append(r); tr.append(td);
     });
     const td = el('td');
     const sel = el('select');
+    sel.setAttribute('aria-label', label + ': colour');
     COLOURS.forEach(([v, l]) => sel.append(new Option(l, v)));
     sel.value = S.emphColor[k] || '';
     sel.onchange = () => { S.emphColor[k] = sel.value; bump(); };
